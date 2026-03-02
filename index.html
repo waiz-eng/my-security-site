@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL SURVIVAL</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    <header class="header">
+    <div class="logo">DIGITAL_SURVIVAL</div>
+    <button class="burger" id="burger">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav">
+        <a href="#">База</a>
+        <a href="#">Скам-детектор</a>
+        <a href="#">SOS</a>
+    </nav>
+    <button class="btn-outline hide-mobile">ВХОД</button>
+</header>
+
+    <main>
+        <section class="scanner">
+    <h2>Сканер ссылок</h2>
+    <div class="scanner-box">
+        <input type="text" id="urlInput" placeholder="Вставь ссылку сюда...">
+        <button onclick="checkLink()">Проверить</button>
+    </div>
+    <p id="scanResult"></p>
+</section>
+        <section class="leak-checker">
+            <h2>Проверка утечек</h2>
+            <div class="leak-box">
+                <input type="email" id="emailInput" placeholder="Твоя почта (e-mail)...">
+                <button onclick="checkLeak()">Сканировать базы</button>
+            </div>
+            <div id="leakStatus"></div>
+        </section>
+        
+        <section class="hero">
+            <!-- ВОТ ЭТОТ БЛОК НУЖНО ЗАМЕНИТЬ -->
+            <h1 id="typewriter">ТВОИ ДАННЫЕ — <br><span class="highlight"></span><span class="cursor">|</span></h1>
+            
+            <p class="subtitle">Инструкция по выживанию в цифровом хаосе.</p>
+            <!-- ... остальные кнопки ... -->
+        </section>
+
+        <section id="guide" class="grid">
+    <!-- Карточка 1: Аккаунты -->
+    <div class="card">
+        <div class="card-num">01</div>
+        <h3>Твои «Вторые половинки»</h3>
+        <p>Использовать один пароль для почты и игр — это как иметь один ключ от квартиры, машины и сейфа. <br><br><strong>Совет:</strong> Скачай менеджер паролей (Bitwarden или KeePass) и включи 2FA везде, где это возможно.</p>
+    </div>
+
+    <!-- Карточка 2: Скам в соцсетях -->
+    <div class="card">
+        <div class="card-num">02</div>
+        <h3>Бесплатный сыр в Telegram</h3>
+        <p>Скам-боты, «раздачи» крипты и сообщения от «друга» с просьбой проголосовать в конкурсе — это ловушки для кражи сессии. <br><br><strong>Совет:</strong> Никогда не вводи код подтверждения из СМС или Telegram на сторонних сайтах.</p>
+    </div>
+
+    <!-- Карточка 3: Цифровой след -->
+    <div class="card">
+        <div class="card-num">03</div>
+        <h3>Интернет всё помнит</h3>
+        <p>Твои фото 5-летней давности и чекины могут использовать для сталкинга или социнженерии. <br><br><strong>Совет:</strong> Проверь настройки приватности в соцсетях и удали лишние приложения, которым ты дал доступ к геолокации.</p>
+    </div>
+</section>
+    </main>
+
+    <section class="fact-block">
+    <div class="fact-content">
+        <span class="badge">Факт дня</span>
+        <p>"90% всех успешных взломов происходят из-за человеческого фактора (фишинга), а не из-за гениальности хакеров."</p>
+    </div>
+</section>
+
+    <footer class="footer">
+        &copy; 2024 Digital Survival. No tracking.
+    </footer>
+
+    <section id="guide" class="grid">
+
+    <script src="script.js"></script>
+
+    <audio id="click-sound" preload="auto">
+    <source src="https://assets.mixkit.co" type="audio/mpeg">
+    </audio>
+
+</body>
+</html>

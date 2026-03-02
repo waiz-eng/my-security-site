@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ccff00;
+}
+
+.nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.nav a:hover {
+    color: #ccff00;
+}
+
+.btn-outline {
+    padding: 10px 20px;
+    border: 1px solid #ccff00;
+    background: transparent;
+    color: #ccff00;
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    background: #ccff00;
+    color: black;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #ccff00;
+}
+
+.subtitle {
+    margin-bottom: 40px;
+    color: #888;
+}
+
+.btn-primary {
+    background: #ccff00;
+    color: black;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.card {
+    background: #111;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+    border-color: #ccff00;
+}
+
+.card-num {
+    font-size: 2rem;
+    color: #ccff00;
+    margin-bottom: 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.7rem;
+    color: #444;
+}
+
+.scanner {
+    text-align: center;
+    padding: 60px 20px;
+    background: #0f0f0f;
+}
+
+.scanner-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#urlInput {
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #ccff00;
+    font-family: inherit;
+}
+
+.scanner button {
+    padding: 15px 30px;
+    background: #ccff00;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#scanResult {
+    margin-top: 20px;
+    font-weight: bold;
+    min-height: 24px;
+}
+
+.danger { color: #ff4444; }
+.safe { color: #00ff88; }
+
+.leak-checker {
+    text-align: center;
+    padding: 60px 20px;
+    background: #0a0a0a;
+    border-top: 1px solid rgba(204, 255, 0, 0.1);
+}
+
+.leak-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#emailInput {
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    background: #111;
+    border: 1px solid #333;
+    color: #ccff00;
+    font-family: inherit;
+}
+
+.leak-checker button {
+    padding: 15px 30px;
+    background: transparent;
+    border: 1px solid #ccff00;
+    color: #ccff00;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#leakStatus {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    min-height: 50px;
+}
+
+.loading { color: #888; font-style: italic; }
+.warning { color: #ff4444; border: 1px solid #ff4444; padding: 10px; display: inline-block; }
+.clean { color: #00ff88; }
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger span {
+    width: 25px;
+    height: 2px;
+    background: #ccff00;
+}
+
+@media (max-width: 768px) {
+    .burger { display: flex; }
+    
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: #111;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        z-index: 1000;
+    }
+
+    .nav.active { right: 0; }
+    
+    .nav a { margin: 20px 0; font-size: 1.2rem; }
+
+    .hide-mobile { display: none; }
+
+    h1 { font-size: 2.5rem; }
+
+    .scanner-box, .leak-box {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    #urlInput, #emailInput { max-width: 100%; }
+}
+
+.fact-block {
+    padding: 60px 20px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+}
+
+.fact-content {
+    max-width: 800px;
+    border-left: 4px solid #ccff00;
+    padding-left: 25px;
+}
+
+.badge {
+    background: #ccff00;
+    color: black;
+    padding: 4px 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.fact-content p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #ccc;
+}
+
+.cursor {
+    color: #ccff00;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+#matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Чтобы фон был ЗА контентом */
+    opacity: 0.15; /* Делаем эффект не слишком ярким, чтобы текст читался */
+}
+
+.btn-primary:active, .btn-outline:active, .btn-secondary:active, .card:active {
+    transform: scale(0.95);
+    filter: brightness(1.2);
+}
